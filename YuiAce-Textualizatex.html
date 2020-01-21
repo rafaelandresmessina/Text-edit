@@ -1,4 +1,4 @@
-<!-- Repositorio oficial dle proyecto: https://github.com/rafaelandresmessina/Textualizatex.git -->
+<!-- Repositorio oficial del proyecto: https://github.com/rafaelandresmessina/Textualizatex.git -->
 <html> 
   <head>
    <title>Resaltador de código para practicar lenguajes de edición de texto</title>   
@@ -152,7 +152,6 @@ YUI().use(
        
                                        
                          EJEMPLOS DE SINTAXIS DE MARKDOWN Y TEX-LATEX
-
   
 -----------------------------------------------------------------------------------------------------------------------------
     Ejemplos de sintáxis Markdown: (Si bien no está estandarizado, suelen ser las mas comunes, salvo excepciones.)
@@ -160,10 +159,7 @@ YUI().use(
 _Saludo_
 __Saludo__
 ___Saludo___
-
 ==Saludo==
-
-
 *hola*
 **Mundo** 
 ***Mundo*** 
@@ -171,17 +167,13 @@ ___Saludo___
 _ _ _  _ _    _ _ _
 > CITA: La vida es muy corta para aprender Alemán. -Tad Marburg
 ----  -- - -    -
-
 # Encabezado Uno
 ## Encabezado Dos
 ### Encabezado Tres
 #### Encabezado Cuatro
 ##### Encabezado Cinco
 ###### Encabezado Seis
-
-
 *********************   
-
 "Salto de línea: Quien fue a Santiago,  
 perdió su clase de redes"
      
@@ -952,273 +944,3 @@ left justified & center & right justified \\ \hline
 <div class="glitchButton"></div>
     
 </footer></body></html>
-<!-- Anterior versión (no utilizar!!!)
-
-
-<html>
-<head>
-   <title>YUI-Ace resaltador de código para Familia de lenguajes manipulación de texto</title>
-   
-<script src="https://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script>
-
-<link href="https://cdn.alloyui.com/3.0.1/aui-css/css/bootstrap.min.css" rel="stylesheet"></link>
-
-<style>
-*{
-background-color:"#f5f5f5";
-margin:1%; padding;1%;
-}
-</style>
-<script>
-
-YUI().use(
-  'aui-ace-editor',
-  
-    function(Y) {
-      new Y.AceEditor(
-      {
-        boundingBox: '#miEditor',
-        height: '200',
-        mode: 'plain_text',
-        value: 'Write here...',
-        width: '900'
-      }
-    ).render();
-  }
-
-);
-
-</script>
-
-
-
-<script>
-
-YUI().use(
-  'aui-ace-editor',
-  
-    function(Y) {
-      new Y.AceEditor(
-      {
-        boundingBox: '#miEditor2',
-        height: '200',
-        mode: 'markdown',
-        value: 'Write here...',
-        width: '900'
-      }
-    ).render();
-  }
-
-);
-
-</script>
-
-
-<script>
-
-YUI().use(
-  'aui-ace-editor',
-  
-    function(Y) {
-      new Y.AceEditor(
-      {
-        boundingBox: '#miEditor3',
-        height: '200',
-        mode: 'tex',
-        value: 'Write here...',
-        width: '900'
-      }
-    ).render();
-  }
-
-);
-
-</script>
-
-<script>
-
-YUI().use(
-  'aui-ace-editor',
-  
-    function(Y) {
-      new Y.AceEditor(
-      {
-        boundingBox: '#miEditor4',
-        height: '200',
-        mode: 'latex',
-        value: 'Write here...',
-        width: '900'
-      }
-    ).render();
-  }
-
-);
-
-</script>
-
-
-</head>
-
-<body>
-
-
- <h1>Resaltador de sintaxis para scripts de manipulación de textos</h1>
-
-<p>Utiliza YUI-Ace, resaltador de código para Familia de lenguajes de Texto</p>
-
-<h2>Plain_text, Markdown, Tex y LaTex.</h2>
-
-<p></p>
-
-<h2></h2>
-
-<p></p>
-
-<tr>
-
-<main>
-
-<div id="Wrapper">
-
-<aside style="margin:1%; padding;1%; width:40%"; >
-  <h3>Plain_text</h3>
-
-  <div id="miEditor"></div>
-</div>
-
-<tr>
-
-
-  <h3>Markdown</h1>
-  
-
-  <div id="miEditor2"></div>
-</div>
-
-</aside>
-
-<tr>
-
-<aside style="margin:1%; padding;1%;width:40%"; >
-<h3>Tex</h3>
-
-  <div id="miEditor3"></div>
-</div>
-
-<tr>
-
-
-  <h3>LateX</h1>
-
-  <div id="miEditor4"></div>
-</div>
-
-
-</aside>
-
-
-
-
-<tr>
-
-<footer>
-
-
-
-
-<h3>Familia de lenguajes de manipulación de texto</h3>
-
-
-<p>Ejemplos:</p>
-
-
-
-<textarea cols="500" rows="500">
-
-
-
-Ejemplos de Plain_text:
-
---------------------------
-       HOLA MUNDO
-
-Lorem ipsum dolor sit amet, consectetur 
-Duis aute irure dolor in reprehenderit in voluptate 
-epteur sint occaecat cupidatat non proident, sunt in.
-
-    "Lorem ipsum dolor sit amet, consectetur 
-Duis aute irure dolor in reprehenderit in voluptate 
-epteur sint occaecat cupidatat non proident, sunt in."
-
---------------------------
-
-
-
-Ejemplos de markdown:
- 
------------------------
-== Saludo ==
-<i>  Itálica <i> 
-* hola *
-** Mundo ** 
-_ _ _ _
--------
-_______
-
------------------------
-
-
-
-Ejemplos de Tex: 
-
------------------------
-
-\begin{document} 
-
-:<math>\sqrt[3]{x+5+2x} = \sqrt[3]{3x+7x+12}</math>
-:<math>x+5+2x = 3x+7x+12</math>
-
-\end{document}
-
------------------------
-
-
-
-Ejemplos de LaTex
-
---------------------
-\documentclass[12pt]{article}
-\usepackage[spanish]{babel}
-\usepackage{amsmath}
-\title{\LaTeX}
-\date{}
-% Este es un comentario, no será mostrado en el documento final.
-\begin{document}
-\maketitle
-
-\LaTeX{} es un programa para preparar documentos con  el sistema de
-tipograf\'ias\footnote{%nota al pie de página Seg\'un Wikipedia, la 
-tipograf\'ia es el arte y t\'ecnica del manejo y selecci\'on de tipos, 
-originalmente de plomo, para crear trabajos de impresi\'on } %fin nota al pie de página
-\TeX{}. \LaTeX{} fue desarrollado originalmente por Leslie Lamport en 
-1984 y se convirti\'o en el m\'etodo dominante para la  manipulaci\'on 
-de \TeX. La versi\'on utilizada para generar  este documento es \LaTeXe.
-\newline
-% El siguiente código muestra la calidad de la tipografía de LaTeX
-\begin{align}
-E &= mc^2                              \\
-m &= \frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}}
-\end{align}
-\end{document}
-
-
---------------------
-
-</textarea>
-
-
-</footer>
-
-</body></html>
-
--->
