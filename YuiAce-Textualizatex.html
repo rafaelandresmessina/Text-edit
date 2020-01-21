@@ -1,4 +1,961 @@
-﻿<html>
+<!-- Repositorio oficial dle proyecto: https://github.com/rafaelandresmessina/Textualizatex.git -->
+<html> 
+  <head>
+   <title>Resaltador de código para practicar lenguajes de edición de texto</title>   
+<script src="https://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script>
+<script href="https://cdn.alloyui.com/3.0.1/aui-css/css/bootstrap.min.css" rel="stylesheet"></script>
+
+<style>
+body{
+background-color:lightgray;
+color:navy;
+margin:1%; padding:1%;
+font-size:0.8em;
+font-family: "arial" ;
+
+}
+  
+  header{
+    color:aqua;
+    background-color:#444;   
+    font-family: "verdana" ;
+    font-size:0.9em;
+
+ }
+  h2 {
+   color:magenta; 
+   font-family: "tahoma";
+    font-size:1em;
+
+  }
+   h4 {
+   color:magenta; 
+   font-family: "tahoma";
+    font-size:0.9em;
+
+  }
+
+  
+</style>
+
+
+<script>
+
+YUI().use(
+  'aui-ace-editor',
+  
+    function(Y) {
+      new Y.AceEditor(
+      {
+        boundingBox: '#miEditor1',
+        height: '200',
+        mode: 'markdown',
+        value: 'Write here...',
+        width: '1500'
+      }
+    ).render();
+  }
+
+);
+
+</script>
+
+
+<script>
+
+YUI().use(
+  'aui-ace-editor',
+  
+    function(Y) {
+      new Y.AceEditor(
+      {
+        boundingBox: '#miEditor3',
+        height: '200',
+        mode: 'latex',
+        value: 'Write here...',
+        width: '1500'
+      }
+    ).render();
+  }
+
+);
+
+</script>
+
+
+
+</head>
+
+<body>
+<header>
+ <h1>Resaltador de código para practicar lenguajes de edición de texto</h1>
+  <p><mark> - Con tecnología de YahooUI y Ace-editor</mark></p>
+  <h2> <big>Para Markdown y LaTex.</h2>
+</header>
+ 
+    <main style="margin:1%; padding:1%;">
+    <aside>
+      
+      <h3> <big>Descripción:</h3>
+        <p> <span>Markdown</span> <i>- Sirve para pasar de texto a html en wikis y otros sitios.</i>
+       <br>
+         <span>LaTex</span> - <i>Sirve para crear textos científicos y matemáticos, manuales con gráficos y símbolos especiales.</i> <br>
+     
+        </p>
+      
+      </aside> 
+<div>
+
+
+  <h4>Codifique aquí con Markdown</h4>
+  <p>Como usar Markdown: <a href="https://about.gitlab.com/handbook/engineering/technical-writing/markdown-guide/">GuíaMarkdown</a></p>
+  <p>Editor de Markdown online: <a href="https://dillinger.io/">Dillinger</a></p>
+  <p>Guía rápida: <a href="https://greg.schueler.us/doc/markdown.txt">Documentación</a></p>
+  
+  
+  
+    
+  <div id="miEditor1"></div>
+
+ 
+      
+      </div>
+<hr>
+
+
+  <h4>Codifique aquí con LateX</h4>
+    <p>Paso 1: Aprende como usar Latex para textos de tesis, enseñanza, PDFs de calidad, etc.): <a href="https://projects.cs.dal.ca/dalthesis/">Dalthesis.</a></p>  
+    
+    
+      <p>Paso 2: Instala el editor de Latex para Google Chrome: <a href="https://texviewer.herokuapp.com/">TeX-LaTex Viewer and Editor.</a></p>
+    
+      
+      <p>Paso 3: Entra al Tex Viewer  editor desde tu navegador Google Chrome y pega el siguiente ejemplo en Latex u otro: <a href="ejemplo1-latex.html">Ejemplo 1 en archivo simple.</a></p>
+    <p>Paso 4: Mira el ejemplo final en PDF <a href=" https://cdn.glitch.com/3849b904-c8b0-482e-ad94-95cb2bc3f6de%2FEjemplo1-Latex.pdf?v=1579494287689">Ejemplo 1 resultado final en PDF.</a></p>
+    <p>Paso 5: Aprende mas en el sitio de usuarios de Tex-Latex: <a href=" http://www.tug.org/">www.tug.org</a></p>
+  <div id="miEditor3"></div>
+</div>
+
+
+
+
+
+</main>
+
+
+<footer style="margin:1%; padding;1%; text-align:center;" >
+   
+<p>Ejemplos:</p>
+
+
+<textarea cols="155" rows="200" style="margin:1%; padding:1%; align-left:10px; font-family: Lucida console; >
+       
+                                       
+                         EJEMPLOS DE SINTAXIS DE MARKDOWN Y TEX-LATEX
+
+  
+-----------------------------------------------------------------------------------------------------------------------------
+    Ejemplos de sintáxis Markdown: (Si bien no está estandarizado, suelen ser las mas comunes, salvo excepciones.)
+ 
+_Saludo_
+__Saludo__
+___Saludo___
+
+==Saludo==
+
+
+*hola*
+**Mundo** 
+***Mundo*** 
+ 
+_ _ _  _ _    _ _ _
+> CITA: La vida es muy corta para aprender Alemán. -Tad Marburg
+----  -- - -    -
+
+# Encabezado Uno
+## Encabezado Dos
+### Encabezado Tres
+#### Encabezado Cuatro
+##### Encabezado Cinco
+###### Encabezado Seis
+
+
+*********************   
+
+"Salto de línea: Quien fue a Santiago,  
+perdió su clase de redes"
+     
+Código Javascript                    
+ ``` Código [Javascript]
+       Se utiliza el acento grave 
+       para identificar código, 
+       y corchetes para identificar 
+       el lenguaje de programación
+       
+       var miVar=0; 
+       function miFun() {
+       miVar=6+10;
+           return(miFun);
+       };
+```
+
+*Texto Resaltado*
+**Texto en Negritas**
+
+1. Elemento de Lista (numerada)
+2. Elemento de Lista (numerada)
+
+   * Elemento de Lista (sin números)
+   * Elemento de Lista (sin números)
+
+<code> Código </code>
+
+<email@tut.com>
+
+[forum] (http://www.tut.com/ "Descripción")                                                                                                                   
+                  
+                                          
+| Fun                  | With                 | Tables          |
+| :------------------- | -------------------: |:---------------:|
+| left-aligned column  | right-aligned column | centered column |
+| $100                 | $100                 | $100            |
+| $10                  | $10                  | $10             |
+| $1                   | $1                   | $1              |
+                                          
+                                          
+       Quick Markdown Syntax Guide
+_____
+
+
+This guide shows you how to use Markdown instead of HTML when
+writing posts or comments.
+
+Markdown is way easier to use than HTML.  (But you can still use HTML at the
+same time if you really want to and you know how.)
+
+Just write in the comment box *the same way it's shown in this file*, it's
+really that simple.
+
+(See bottom for more info about Markdown itself.)
+
+Links
+-----
+
+For a URL or email, just write it like this:
+
+<http://someurl>
+
+<somebbob@example.com>
+
+
+To use text for the link, write it [like this](http://someurl).
+
+You can add a *title* (which shows up under the cursor), 
+[like this](http://someurl "this title shows up when you hover").
+
+Reference Links
+---------------
+
+You can also put the [link URL][1] below the current paragraph like [this][2].
+
+   [1]: http://url
+   [2]: http://another.url "A funky title"
+
+Here the text "link URL" gets linked to "http://url", and the lines showing 
+"[1]: http://url" won't show anything.
+
+
+Or you can use a [shortcut][] reference, which links the text "shortcut" 
+to the link named "[shortcut]" on the next paragraph.
+
+   [shortcut]: http://goes/with/the/link/name/text
+   
+
+
+Text
+----
+
+Use * or _ to emphasize things:
+
+*this is in italic*  and _so is this_
+
+**this is in bold**  and __so is this__
+
+***this is bold and italic***  and ___so is this___
+
+
+Just write paragraphs like in a text file and they will display how you would
+expect.  A blank line separates paragraphs.
+
+So this is a new paragraph. But any text on adjacent lines
+will all end up 
+in the same paragraph.
+
+
+Blockquotes
+----------
+
+> Use the > character in front of a line, *just like in email*.
+> Use it if you're quoting a person, a song or whatever.
+
+> You can use *italic* or lists inside them also.
+And just like with other paragraphs,
+all of these lines are still
+part of the blockquote, even without the > character in front.  
+
+To end the blockquote, just put a blank line before the following paragraph.
+
+
+Preformatted Text
+----------------
+
+If you want some text to show up exactly as you write it, without Markdown
+doing anything to it, just indent every line by at least 4 spaces (or 1 tab).
+
+    This line won't *have any markdown* formatting applied.
+    I can even write <b>HTML</b> and it will show up as text.
+    This is great for showing program source code, or HTML or even Markdown.
+    <b>this won't show up as HTML</b> but exactly <i>as you see it in
+    this text file</i>.
+
+(In a normal paragraph, <b>this will show up in bold</b> just like normal HTML.)
+    
+   Remember, you have to indent by *at least 4 spaces* to do it.  This paragraph
+   won't be preformatted.
+   
+And if you use [reference][] links, make sure the links are indented 
+by *fewer than* 4 spaces.
+   
+    [reference]: http://example.com/blah
+
+(woops, that link didn't work, see? It just got displayed as preformatted text.)  
+
+As a shortcut you can use backquotes to do the same thing while inside
+a normal pargraph.  `This won't be *italic* or **bold** at all.`
+
+Lists
+--------
+
+* an asterisk starts an unordered list
+* and this is another item in the list
++ or you can also use the + character
+- or the - character
+
+To start an ordered list, write this:
+
+1. this starts a list *with* numbers
++  this will show as number "2"
+*  this will show as number "3."
+9. any number, +, -, or * will keep the list going.
+    * just indent by 4 spaces (or tab) to make a sub-list
+        1. keep indenting for more sub lists
+    * here i'm back to the second level
+        
+        
+Headers
+---------
+
+This is a huge header
+==================
+
+this is a smaller header
+------------------
+
+Just put 1 or more dashes or equals signs (--- or ===) below the title.
+
+You might use the huge header at the very top of your text for a title or
+something (except weblog posts usually already have a title), and use the
+smaller header for subtitles or sections.
+
+
+Horizontal Rule
+---------------
+
+just put three or more *'s or -'s on a line:
+
+----------------
+
+or you can use single spaces between then, like this:
+
+* * *
+
+or 
+
+- - - - - - - 
+
+Make sure you have a blank line above the dashes, though, or else:
+
+you will get a header
+--- 
+
+
+Images
+-----------
+
+To include an image, just put a "!" in front of a text link:
+
+![alternate text](http://someurl/image.gif)
+
+
+The "alternate text" will show up if the browser can't load the image.
+
+You can also use a title if you want, like this:
+
+![tiny arrow](http://greg.vario.us/img/extlink.png "tiny arrow")
+
+
+
+Escapes
+---------
+
+What if you want to just show asterisks, not italics?
+
+* this shows up in italics: *a happy day*
+* this shows the asterisks: \*a happy day\*
+
+The backslashes will disappear and leave the asterisks.
+
+You can do the same with any of the characters that have a special meaning
+for Markdown.
+
+
+More Headers
+----------
+
+More ways of doing headers:
+
+# this is a huge header #
+## this is a smaller header ##
+### this is even smaller ###
+#### more small ####
+##### even smaller #####
+###### smallest still: `<h6>` header
+
+You can use up to 6 `#` characters at the beginning of the line.  
+(You can optionally put them on the end, too, and they will disappear.)
+
+   
+
+HTML crap
+-------------
+
+Don't worry about special HTML characters. I can write an ampersand & a 
+less-than sign, and they show up as I intend them to:  3 < 4.
+
+(You can still write `&amp;` (& character) and `&lt;` (<) or `&gt;` (>) if you
+want.  or ignore what I just said.)
+
+
+About
+---------
+
+This text file shows you how to use [Markdown][] instead of crappy HTML when
+writing posts or comments.
+   
+   [Markdown]: http://daringfireball.net/projects/markdown/syntax
+
+Markdown is an easier way of making HTML pages from text, rather than having to
+know HTML.
+
+* See this file as it looks when [rendered with Markdown][].
+* See the [original text file][].
+
+   [rendered with Markdown]: http://greg.vario.us/doc/markdown.text
+   [original text file]: http://greg.vario.us/doc/markdown.txt
+
+
+                                                               
+CODE BLOCKS
+                                                               
+                                                               
+Pre-formatted code blocks are used for writing about programming or markup source code. Rather than forming normal paragraphs, the lines of a code block are interpreted literally. Markdown wraps a code block in both <pre> and <code> tags.
+
+To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab. For example, given this input:
+
+This is a normal paragraph:
+                                                               
+
+    This is a code block.
+Markdown will generate:
+
+<p>This is a normal paragraph:</p>
+
+<pre><code>This is a code block.
+</code></pre>
+                                                               
+One level of indentation — 4 spaces or 1 tab — is removed from each line of the code block. For example, this:
+
+Here is an example of AppleScript:
+
+    tell application "Foo"
+        beep
+    end tell
+will turn into:
+
+<p>Here is an example of AppleScript:</p>
+
+<pre><code>tell application "Foo"
+    beep
+end tell
+</code></pre>
+                                 
+A code block continues until it reaches a line that is not indented (or the end of the article).
+
+Within a code block, ampersands (&) and angle brackets (< and >) are automatically converted into HTML entities. 
+                                 This makes it very easy to include example HTML source code using Markdown —
+                                 just paste it and indent it, and Markdown will handle the hassle of encoding the ampersands and angle brackets. 
+                                 For example, this:
+
+    <div class="footer">
+        &copy; 2004 Foo Corporation
+    </div>
+                       
+will turn into:
+
+<pre><code>&lt;div class="footer"&gt;
+    &amp;copy; 2004 Foo Corporation
+&lt;/div&gt;
+</code></pre>
+                                 
+Regular Markdown syntax is not processed within code blocks. 
+E.g., asterisks are just literal asterisks within a code block. 
+ his means it’s also easy to use Markdown to write about Markdown’s own syntax.
+                                                               
+                              
+                                 
+                                 Code Highlighting
+                                 
+The code highlighting syntax uses CodeHilite and is colored with Pygments. It follows the same syntax as regular Markdown code blocks, with ways to tell the highlighter what language to use for the code block.
+
+The language will be detected automatically, if possible. Or you can specify it on the first line with 3 colons and the language name.
+
+    :::python
+    import abc
+Output:
+
+import abc
+If the first line of the codeblock contains a shebang, the language is derived from that and line numbers are used. If shebang line contains a full path, it will be included in the output. If it does not contain a path (a single / or even a space), then that shebang line will be omitted from output.
+
+    #!/usr/bin/python
+    import abc
+Output:
+
+1
+2
+#!/usr/bin/python
+import abc
+If using a code block of tildes or backticks, you can also specify the language on the first divider line
+
+~~~html
+<a href="#">My code</a>
+~~~
+```html
+<a href="#">My code</a>
+```
+Output:
+
+<a href="#">My code</a>
+Many languages are supported. See all the "short names" listed in the Pygments docs. <https://pygments.org/docs/lexers/>
+                                 
+                                                               
+Fin
+---------
+                 
+                                 
+Extended Syntax
+
+                                 Advanced features that build on the basic Markdown syntax.
+
+Overview
+The basic syntax outlined in John Gruber’s original design document added many of the elements needed on a day-to-day basis, but it wasn’t enough for some people. That’s where extended syntax comes in.
+
+Several individuals and organizations took it upon themselves to extend the basic syntax by adding additional elements like tables, code blocks, syntax highlighting, URL auto-linking, and footnotes. These elements can be enabled by using a lightweight markup language that builds upon the basic Markdown syntax, or by adding an extension to a compatible Markdown processor.
+
+Availability
+Not all Markdown applications support extended syntax elements. You’ll need to check whether or not the lightweight markup language your application is using supports the extended syntax elements you want to use. If it doesn’t, it may still be possible to enable extensions in your Markdown processor.
+
+Lightweight Markup Languages
+There are several lightweight markup languages that are supersets of Markdown. They include Gruber’s basic syntax and build upon it by adding additional elements like tables, code blocks, syntax highlighting, URL auto-linking, and footnotes. Many of the most popular Markdown applications use one of the following lightweight markup languages:
+
+CommonMark
+GitHub Flavored Markdown (GFM)
+Markdown Extra
+MultiMarkdown
+R Markdown
+Markdown Processors
+There are dozens of Markdown processors available. Many of them allow you to add extensions that enable extended syntax elements. Check your processor’s documentation for more information.
+
+Tables
+To add a table, use three or more hyphens (---) to create each column’s header, and use pipes (|) to separate each column. You can optionally add pipes on either end of the table.
+
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+The rendered output looks like this:
+
+Syntax	Description
+Header	Title
+Paragraph	Text
+Cell widths can vary, as shown below. The rendered output will look the same.
+
+| Syntax | Description |
+| --- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+ Tip: Creating tables with hyphens and pipes can be tedious. To speed up the process, try using the Markdown Tables Generator. Build a table using the graphical interface, and then copy the generated Markdown-formatted text into your file.
+Alignment
+You can align text in the columns to the left, right, or center by adding a colon (:) to the left, right, or on both side of the hyphens within the header row.
+
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
+The rendered output looks like this:
+
+Syntax	Description	Test Text
+Header	Title	Here’s this
+Paragraph	Text	And more
+Formatting Text in Tables
+You can format the text within tables. For example, you can add links, code (words or phrases in backticks (`) only, not code blocks), and emphasis.
+
+You can’t add headings, blockquotes, lists, horizontal rules, images, or HTML tags.
+
+Escaping Pipe Characters in Tables
+You can display a pipe (|) character in a table by using its HTML character code (&#124;).
+
+Fenced Code Blocks
+The basic Markdown syntax allows you to create code blocks by indenting lines by four spaces or one tab. If you find that inconvenient, try using fenced code blocks. Depending on your Markdown processor or editor, you’ll use three backticks (```) or three tildes (~~~) on the lines before and after the code block. The best part? You don’t have to indent any lines!
+
+```
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+The rendered output looks like this:
+
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+ Tip: Need to display backticks inside a code block? See this section to learn how to escape them.
+Syntax Highlighting
+Many Markdown processors support syntax highlighting for fenced code blocks. This feature allows you to add color highlighting for whatever language your code was written in. To add syntax highlighting, specify a language next to the backticks before the fenced code block.
+
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+The rendered output looks like this:
+
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+Footnotes
+Footnotes allow you to add notes and references without cluttering the body of the document. When you create a footnote, a superscript number with a link appears where you added the footnote reference. Readers can click the link to jump to the content of the footnote at the bottom of the page.
+
+To create a footnote reference, add a caret and an identifier inside brackets ([^1]). Identifiers can be numbers or words, but they can’t contain spaces or tabs. Identifiers only correlate the footnote reference with the footnote itself — in the output, footnotes are numbered sequentially.
+
+Add the footnote using another caret and number inside brackets with a colon and text ([^1]: My footnote.). You don’t have to put footnotes at the end of the document. You can put them anywhere except inside other elements like lists, block quotes, and tables.
+
+Here's a simple footnote,[^1] and here's a longer one.[^bignote]
+
+[^1]: This is the first footnote.
+
+[^bignote]: Here's one with multiple paragraphs and code.
+
+    Indent paragraphs to include them in the footnote.
+
+    `{ my code }`
+
+    Add as many paragraphs as you like.
+The rendered output looks like this:
+
+Here’s a simple footnote,1 and here’s a longer one.2
+
+This is the first footnote. ↩
+
+Here’s one with multiple paragraphs and code.
+
+Indent paragraphs to include them in the footnote.
+
+{ my code }
+
+Add as many paragraphs as you like. ↩
+
+Heading IDs
+Many Markdown processors support custom IDs for headings — some Markdown processors automatically add them. Adding custom IDs allows you to link directly to headings and modify them with CSS. To add a custom heading ID, enclose the custom ID in curly braces on the same line as the heading.
+
+### My Great Heading {#custom-id}
+The HTML looks like this:
+
+<h3 id="custom-id">My Great Heading</h3>
+Linking to Heading IDs
+You can link to headings with custom IDs in the file by creating a standard link with a number sign (#) followed by the custom heading ID.
+
+Markdown	HTML	Rendered Output
+[Heading IDs](#heading-ids)	<a href="#heading-ids">Heading IDs</a>	Heading IDs
+Other websites can link to the heading by adding the custom heading ID to the full URL of the webpage (e.g, [Heading IDs](https://www.markdownguide.org/extended-syntax#heading-ids)).
+
+Definition Lists
+Some Markdown processors allow you to create definition lists of terms and their corresponding definitions. To create a definition list, type the term on the first line. On the next line, type a colon followed by a space and the definition.
+
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+The HTML looks like this:
+
+<dl>
+  <dt>First Term</dt>
+  <dd>This is the definition of the first term.</dd>
+  <dt>Second Term</dt>
+  <dd>This is one definition of the second term. </dd>
+  <dd>This is another definition of the second term.</dd>
+</dl>
+The rendered output looks like this:
+
+First Term
+This is the definition of the first term.
+Second Term
+This is one definition of the second term.
+This is another definition of the second term.
+Strikethrough
+You can “strikethrough” words by putting a horizontal line through the center of them. The result looks like this. This feature allows you to indicate that certain words are a mistake not meant for inclusion in the document. To strikethrough words, use two tilde symbols (~~) before and after the words.
+
+~~The world is flat.~~ We now know that the world is round.
+The rendered output looks like this:
+
+The world is flat. We now know that the world is round.
+
+Task Lists
+Task lists allow you to create a list of items with checkboxes. In Markdown applications that support task lists, checkboxes will be displayed next to the content. To create a task list, add dashes (-) and brackets with a space ([ ]) in front of task list items. To select a checkbox, add an x in between the brackets ([x]).
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+The rendered output looks like this:
+
+Markdown task list
+
+Automatic URL Linking
+Many Markdown processors automatically turn URLs into links. That means if you type http://www.example.com, your Markdown processor will automatically turn it into a link even though you haven’t used brackets.
+
+http://www.example.com
+The rendered output looks like this:
+
+http://www.example.com
+
+Disabling Automatic URL Linking
+If you don’t want a URL to be automatically linked, you can remove the link by denoting the URL as code with backticks.
+
+`http://www.example.com`
+The rendered output looks like this:
+
+http://www.example.com    
+                                          
+-------------------------------------------------------------------------------------------------------------
+
+
+
+    Ejemplos de sintaxis Lenguaje LaTex
+                                          
+                                       
+                                          
+                                          Un ejemplo muy simple introductorio
+                                          
+                                          
+                                          
+% This is a small sample LaTeX input file (Version of 10 April 1994)
+%
+% Use this file as a model for making your own LaTeX input file.
+% Everything to the right of a  %  is a remark to you and is ignored by LaTeX.
+
+% The Local Guide tells how to run LaTeX.
+
+% WARNING!  Do not type any of the following 10 characters except as directed:
+%                &   $   #   %   _   {   }   ^   ~   \   
+
+\documentclass{article}        % Your input file must contain these two lines 
+\begin{document}               % plus the \end{document} command at the end.
+
+
+\section{Simple Text}          % This command makes a section title.
+
+Words are separated by one or more spaces.  Paragraphs are separated by
+one or more blank lines.  The output is not affected by adding extra
+spaces or extra blank lines to the input file.
+
+Double quotes are typed like this: ``quoted text''.
+Single quotes are typed like this: `single-quoted text'.
+
+Long dashes are typed as three dash characters---like this.
+
+Emphasized text is typed like this: \emph{this is emphasized}.
+Bold       text is typed like this: \textbf{this is bold}.
+
+\subsection{A Warning or Two}  % This command makes a subsection title.
+
+If you get too much space after a mid-sentence period---abbreviations
+like etc.\ are the common culprits)---then type a backslash followed by
+a space after the period, as in this sentence.
+
+Remember, don't type the 10 special characters (such as dollar sign and
+backslash) except as directed!  The following seven are printed by
+typing a backslash in front of them:  \$  \&  \#  \%  \_  \{  and  \}.  
+The manual tells how to make other symbols.
+
+\end{document}                 % The input file ends with this command.
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          Ejemplo 1
+                                          
+
+\pdfminorversion=4
+\documentclass[]{article}
+
+%%%%%%%%%%%%%%%%%%%
+% Packages/Macros %
+%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb,latexsym,amsmath}     % Standard packages
+
+%%%%%%%%%%%
+% Margins %
+%%%%%%%%%%%
+\addtolength{\textwidth}{1.0in}
+\addtolength{\textheight}{1.00in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\topmargin}{-.50in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theorem/Proof Environments %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{theorem}{Theorem}
+\newenvironment{proof}{\noindent{\bf Proof:}}{$\hfill \Box$ \vspace{10pt}}  
+
+
+%%%%%%%%%%%%
+% Document %
+%%%%%%%%%%%%
+\begin{document}
+
+\title{Sample \LaTeX ~File}
+\author{David P. Little}
+\maketitle
+
+\begin{abstract}
+This document represents the output from the file ``sample.tex" once compiled using your favorite \LaTeX compiler.  This file should serve as a good example of the basic structure of a ``.tex" file as well as many of the most basic commands needed for typesetting documents involving mathematical symbols and expressions.  For more of a description on how each command works, please consult the links found on our course webpage.
+\end{abstract}
+
+\section{Lists}
+%%%%%%%%%%%%%%%
+\begin{enumerate}
+\item {\bf First Point (Bold Face)}
+\item {\em Second Point (Italic)}
+\item {\Large Third Point (Large Font)}
+    \begin{enumerate}
+        \item {\small First Subpoint (Small Font)} 
+        \item {\tiny Second Subpoint (Tiny Font)} 
+        \item {\Huge Third Subpoint (Huge Font)} 
+    \end{enumerate}
+\item[$\bullet$] {\sf Bullet Point (Sans Serif)}
+\item[$\circ$] {\sc Circle Point (Small Caps)} 
+\end{enumerate}
+
+\section{Equations}
+%%%%%%%%%%%%%%%%%%%
+
+\subsection{Binomial Theorem}
+\begin{theorem}[Binomial Theorem]
+For any nonnegative integer $n$, we have
+$$(1+x)^n = \sum_{i=0}^n {n \choose i} x^i$$
+\end{theorem}
+
+\subsection{Taylor Series}
+The Taylor series expansion for the function $e^x$ is given by
+\begin{equation}
+e^x = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \cdots = \sum_{n\geq 0} \frac{x^n}{n!}
+\end{equation}
+
+
+\subsection{Sets}
+
+\begin{theorem}
+For any sets $A$, $B$ and $C$, we have
+$$ (A\cup B)-(C-A) = A \cup (B-C)$$
+\end{theorem}
+
+\begin{proof}
+\begin{eqnarray*}
+(A\cup B)-(C-A) &=& (A\cup B) \cap (C-A)^c\\
+&=& (A\cup B) \cap (C \cap A^c)^c \\
+&=& (A\cup B) \cap (C^c \cup A) \\
+&=& A \cup (B\cap C^c) \\
+&=& A \cup (B-C)
+\end{eqnarray*}
+\end{proof}
+
+\section{Tables}
+%%%%%%%%%%%%%%%%
+\begin{center}
+\begin{tabular}{l||c|r}
+left justified & center & right justified \\ \hline
+1 & 3.14159 & 5 \\
+2.4678 & 3 &  1234 \\ \hline \hline
+3.4678 & 6.14159 & 1239
+\end{tabular}
+\end{center}
+
+\section{A Picture}
+%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\begin{picture}(100,100)(0,0)
+\setlength{\unitlength}{1pt}
+\put(20,70){\circle{30}}  \put(20,70){\circle*{10}}   % left eye
+\put(80,70){\circle{30}}  \put(80,70){\circle*{10}}   % right eye
+\put(40,40){\line(1,2){10}} \put(60,40){\line(-1,2){10}} \put(40,40){\line(1,0){20}} % nose
+\put(50,20){\oval(80,10)[b]} % mouth
+\multiput(0,90)(4,0){10}{\line(1,3){4}}  % left eyebrow
+\multiput(100,90)(-4,0){10}{\line(-1,3){4}}  % right eyebrow
+\end{picture}
+\end{center}
+
+\end{document}                                               
+                                         
+-------------------------------------------------------------------------------------------------------------------------------
+</textarea>
+<!-- Remix Button -->
+<a href="https://glitch.com/edit/?utm_content=project_vast-calcium&utm_source=remix_this&utm_medium=button&utm_campaign=glitchButton#!/remix/vast-calcium">
+  <img src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fremix%402x.png?1513093958726" alt="remix this" height="33">
+</a>
+  
+  <!-- Project Helper -->
+<!-- ✂️ Copy this script to your project's view: -->
+<script src="https://button.glitch.me/button.js"></script>
+<!-- ✂️ Copy this to wherever you want the button to show: -->
+<div class="glitchButton"></div>
+    
+</footer></body></html>
+<!-- Anterior versión (no utilizar!!!)
+
+
+<html>
 <head>
    <title>YUI-Ace resaltador de código para Familia de lenguajes manipulación de texto</title>
    
@@ -263,3 +1220,5 @@ m &= \frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}}
 </footer>
 
 </body></html>
+
+-->
